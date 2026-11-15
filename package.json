@@ -1,0 +1,64 @@
+{
+  "name": "@xiaozou-wine/session-auto-archive",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Archive DeepSeek Harness sessions that have been inactive for a configurable number of days",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "archive",
+    "settings",
+    "web"
+  ],
+  "homepage": "https://github.com/xiaozou-second/dsh-session-auto-archive#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaozou-second/dsh-session-auto-archive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaozou-second/dsh-session-auto-archive/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

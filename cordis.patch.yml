@@ -1,0 +1,12 @@
+# Bundle layer of @xiaozou-wine/session-auto-archive: one row whose config the
+# plugin's Settings page edits through the profile patch.
+- insert:
+    - id: session-auto-archive
+      name: '@xiaozou-wine/session-auto-archive'
+      config:
+        enabled: true
+        days: 30
+        intervalMinutes: 60
+        dryRun: false
+        skipPinned: true
+        includeSubagentSessions: false

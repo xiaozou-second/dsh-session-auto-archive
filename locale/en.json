@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session auto-archive",
+    "description": "Hides sessions that have been inactive for a configurable number of days by putting them into the archive, where they stay restorable. The threshold and the check interval are ordinary plugin settings: open Settings → Plugins, find this plugin, open the session-auto-archive row, and edit them there. Archiving is never destructive, and sessions that are running, pinned, targeted by a schedule, or inactive for less than the threshold are left alone.",
+    "detail": "docs/DETAIL.md"
+  }
+}
